@@ -1,0 +1,573 @@
+                    /*CLASS*/
+
+
+
+
+
+                    .tracking-in-contract {
+                        -webkit-animation: tracking-in-contract .8s cubic-bezier(.215, .61, .355, 1.000) both;
+                        animation: tracking-in-contract .8s cubic-bezier(.215, .61, .355, 1.000) both
+                    }
+
+                    .kenburns-bottom-right {
+                        -webkit-animation: kenburns-bottom-right 8s ease-out infinite alternate-reverse both;
+                        animation: kenburns-bottom-right 8s ease-out infinite alternate-reverse both
+                    }
+
+                    .bg-pan-right {
+                        -webkit-animation: bg-pan-right 8s both;
+                        animation: bg-pan-right 8s both
+                    }
+
+
+                    .projet {
+                        margin-top: 0vh;
+                    }
+
+                    .bgGrey {
+                        background: #AFAFAF;
+                    }
+
+
+                    .titreProjets {
+                        background: #C6C6C6;
+                        border: 1 #C6C6C6 double;
+                        width: 60vw;
+                        border-radius: 12px;
+                        margin-bottom: 8vh;
+                        margin-top: 4vh;
+
+
+                    }
+
+                    .span1 {
+                        text-align: center;
+                        font-family: arial black, sans-serif;
+                        color: #483F2F;
+                    }
+
+                    .date-project {
+                        display: block;
+                        font-family: arial, sans-serif;
+                        color: black;
+                        margin-bottom: 80px;
+                    }
+
+
+
+
+                    .logoBasic {
+                        margin-top: 10vh;
+                        margin-bottom: 8vh;
+                        justify-content: center;
+                        width: 22vw;
+                        height: 22vh;
+                    }
+
+                    .photoBasic {
+                        margin-top: 4vh;
+                        justify-content: center;
+                        width: 65vw;
+                        height: auto;
+                    }
+
+                    .logoX {
+                        width: 20vw;
+                        margin-left: 8vw;
+                        margin-top: 4vh;
+                        height: auto;
+                    }
+
+                    .headerBG {
+                        background: #18A2B8;
+                    }
+
+                    .RetAccueil {
+                        color: #FFFFBE;
+                    }
+
+                    .copyMN {
+                        color: #FFFFBE;
+                    }
+
+                    .videos {
+                        margin-top: 10vh;
+                        margin-bottom: 10vh;
+                    }
+
+
+                    .menu6 {}
+
+                    /*ID*/
+
+
+                    #imgIndex {}
+
+                    #IDpprofil {
+                        margin-bottom: 7vh;
+                    }
+
+                    #horloge {
+
+                        margin-bottom: 4vh;
+                    }
+
+                    #logoCA {
+                        margin-bottom: 6vh;
+                    }
+
+                    #logoPresentation {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+
+                    #facadeCampus {
+                        width: 80vw;
+                        margin: 4vh;
+                    }
+
+
+                    #presentation {
+                        width: auto;
+                        margin-top: 4vh;
+
+
+                    }
+
+                    #menu {
+                        height: auto;
+                        width: auto;
+                        display: flex;
+                        justify-content: center;
+
+
+                    }
+
+                    #menu2 {
+                        height: auto;
+                        width: auto;
+                        display: flex;
+                        justify-content: center;
+
+                    }
+
+                    #logo {}
+
+                    #t2 {
+                        margin-top: 12vh;
+                        margin-bottom: 12vh;
+                        color: #524342;
+                    }
+
+
+                    #t3 {
+
+                        color: #18A2B8;
+                    }
+
+                    #projets {}
+
+
+                    #aFooter {
+                        color: #18A2B8;
+                    }
+
+                    /*MAIN*/
+
+
+                    nav {
+                        width: 44vw;
+                        height: auto;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                    }
+
+                    nav div {
+                        align-content: center;
+                        text-align: center;
+
+                    }
+
+                    nav div div {
+
+
+                        margin-bottom: 0vh;
+                        margin-left: 2%;
+                        margin-right: 2%;
+                    }
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    img[title=img1]:hover {}
+
+                    img[title=img1] {
+                        height: auto;
+                        width: 60%;
+                        box-shadow: 4px 10px 50px grey;
+                    }
+
+                    img[title=img1]:hover {
+                        box-shadow: 8px 13px 13px grey;
+                    }
+
+                    body {
+                        background-color: #FFEBB5;
+                        margin: 0;
+                        text-align: justify;
+                    }
+
+                    section[title="section1"] {
+                        text-align: center;
+                    }
+
+                    img[title="photo1"] {
+                        width: 440px;
+                        height: auto;
+                        margin-top: 50px;
+                        box-shadow: 8px 12px 20px black;
+                    }
+
+                    img[title="profil"] {
+                        height: auto;
+                        width: 200px
+                    }
+
+                    img[title="logo"] {
+                        width: 150px;
+                        padding-bottom: 50px;
+                        padding-top: 60px;
+                    }
+
+                    h2 {
+                        margin-top: 2vh;
+
+                    }
+
+                    header {
+                        font-family: arial black, sans-serif;
+                        color: #4E4E4E;
+                        text-align: center;
+
+                        padding-top: 0px;
+                        padding-bottom: 20px
+                    }
+
+                    main {
+                        font-family: arial black, sans-serif;
+                        color: #0A1E54;
+                        text-align: center;
+                    }
+
+                    nav {
+                        text-align: center;
+                        margin-top: 50px;
+                        margin-bottom: 50px;
+                    }
+
+
+                    a[title="link1"] {
+                        font-family: 'Paytone One', sans-serif;
+                        text-decoration: none;
+                        color: #6C6C6C;
+                        border: 3px #A2A2A2 inset;
+                        border-radius: 5px;
+                        padding: 4px;
+                        box-shadow: 8px 10px 10px;
+
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: grey;
+                    }
+
+                    li {
+                        display: inline;
+                        padding: 15px;
+                        font-size: 1.5em;
+                        font-family: arial black, sans-serif;
+                    }
+
+                    h1 {
+                        color: #18A2B8;
+                        padding-top: 30px;
+                        padding-bottom: 60px;
+                        font-family: 'Paytone One', sans-serif;
+
+                        text-align: center;
+                    }
+
+                    img[title="img1"]:hover {
+                        color: #303839;
+                    }
+
+                    img {
+                        border-radius: 15px;
+
+                    }
+
+
+                    footer a {
+                        color: #C0FFFF;
+                    }
+
+                    h2[title="titre3"] {
+                        font-size: 4em;
+                        font-family: 'Paytone One', sans-serif;
+                        margin-top: 0;
+                        margin-left: 44px;
+                        margin-right: 44px;
+                    }
+
+                    h2[title="titre2.2"] {
+                        font-family: 'Paytone One', sans-serif;
+                        font-size: 2.8em;
+                        text-align: center;
+                        color: #18A2B8;
+                    }
+
+                    h2[title="titre2.2"]:before {
+                        content: " « ";
+                    }
+
+                    h2[title="titre2.2"]:after {
+                        content: " » ";
+                    }
+
+                    h2[title="titre2.3"] {
+                        font-family: 'Paytone One', sans-serif;
+                        font-size: 2.8em;
+                        text-align: center;
+                        color: beige;
+                        text-shadow: 4px 4px 30px silver;
+                    }
+
+
+                    h2 {
+                        padding-bottom: 20px;
+                    }
+
+                    footer {
+                        font-family: 'Paytone One', sans-serif;
+                        margin-top: 100px;
+                        text-align: center;
+                        color: #8A8A8A;
+                        height: 6vh;
+                    }
+
+
+
+                    main {
+                        text-align: center;
+                    }
+
+                    svg {
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        float: right;
+
+                    }
+
+                    section {
+                        margin-bottom: 8vh;
+                        margin-top: 4vh;
+                    }
+
+
+
+                    sidenav {
+                        height: 100%;
+                        width: 0;
+                        position: fixed;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        background-color: #111;
+                        overflow-x: hidden;
+                        transition: 0.5s;
+                        padding-top: 60px;
+                    }
+
+                    .sidenav a {
+                        padding: 8px 8px 8px 32px;
+                        text-decoration: none;
+                        font-size: 25px;
+                        color: #818181;
+                        display: block;
+                        transition: 0.3s;
+                    }
+
+                    .sidenav a:hover {
+                        color: #f1f1f1;
+                    }
+
+                    .sidenav .closebtn {
+                        position: absolute;
+                        top: 0;
+                        right: 25px;
+                        font-size: 36px;
+                        margin-left: 50px;
+                    }
+
+                    #main {
+                        transition: margin-left .5s;
+                        padding: 16px;
+                        color: whitesmoke;
+                    }
+
+                    @media screen and (max-height: 450px) {
+                        .sidenav {
+                            padding-top: 15px;
+                        }
+
+                        .sidenav a {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .montitre {
+                        font-size: 300%;
+                        left: 0;
+                        line-height: 200px;
+                        margin-top: -100px;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        width: 100%;
+                        text-shadow: 0px 3px 0px #FFFFFF,
+                            0px 14px 10px rgba(0, 0, 0, 0.15),
+                            0px 24px 2px rgba(0, 0, 0, 0.1),
+                            0px 34px 30px rgba(0, 0, 0, 0.1);
+                        font-family: 'Alatsi', sans-serif;
+
+                    }
+
+
+
+                    /*     MEDIA    */
+
+
+                    @keyframes bouncy {
+                        0% {
+                            top: 0em
+                        }
+
+                        40% {
+                            top: 0em
+                        }
+
+                        43% {
+                            top: -0.9em
+                        }
+
+                        46% {
+                            top: 0em
+                        }
+
+                        48% {
+                            top: -0.4em
+                        }
+
+                        50% {
+                            top: 0em
+                        }
+
+                        100% {
+                            top: 0em;
+                        }
+                    }
+
+
+                    @-webkit-keyframes bg-pan-right {
+                        0% {
+                            background-position: 0 50%
+                        }
+
+                        100% {
+                            background-position: 100% 50%
+                        }
+                    }
+
+                    @keyframes bg-pan-right {
+                        0% {
+                            background-position: 0 50%
+                        }
+
+                        100% {
+                            background-position: 100% 50%
+                        }
+                    }
+
+                    @-webkit-keyframes tracking-in-contract {
+                        0% {
+                            letter-spacing: 1em;
+                            opacity: 0
+                        }
+
+                        40% {
+                            opacity: .6
+                        }
+
+                        100% {
+                            letter-spacing: normal;
+                            opacity: 1
+                        }
+                    }
+
+                    @keyframes tracking-in-contract {
+                        0% {
+                            letter-spacing: 1em;
+                            opacity: 0
+                        }
+
+                        40% {
+                            opacity: .6
+                        }
+
+                        100% {
+                            letter-spacing: normal;
+                            opacity: 1
+                        }
+                    }
+
+
+                    @-webkit-keyframes kenburns-bottom-right {
+                        0% {
+                            -webkit-transform: scale(1) translate(0, 0);
+                            transform: scale(1) translate(0, 0);
+                            -webkit-transform-origin: 84% 84%;
+                            transform-origin: 84% 84%
+                        }
+
+                        100% {
+                            -webkit-transform: scale(1.25) translate(20px, 15px);
+                            transform: scale(1.25) translate(20px, 15px);
+                            -webkit-transform-origin: right bottom;
+                            transform-origin: right bottom
+                        }
+                    }
+
+                    @keyframes kenburns-bottom-right {
+                        0% {
+                            -webkit-transform: scale(1) translate(0, 0);
+                            transform: scale(1) translate(0, 0);
+                            -webkit-transform-origin: 84% 84%;
+                            transform-origin: 84% 84%
+                        }
+
+                        100% {
+                            -webkit-transform: scale(1.25) translate(20px, 15px);
+                            transform: scale(1.25) translate(20px, 15px);
+                            -webkit-transform-origin: right bottom;
+                            transform-origin: right bottom
+                        }
+                    }
