@@ -1,3 +1,82 @@
+<?php
+
+$bdd = new PDO('mysql:host=localhost;dbname=espace_membre', 'root', 'root');
+
+if(isset($_POST['forminscription']))
+{
+    $prenom =htmlspecialchars($_POST['prenom']);
+    $nom =htmlspecialchars($_POST['nom']);
+    $entreprise =htmlspecialchars($_POST['entreprise']);
+    $poste =htmlspecialchars($_POST['poste']);
+    $mail =htmlspecialchars($_POST['mail']);
+    $mail2 =htmlspecialchars($_POST['mail2']);
+    $telephone =htmlspecialchars($_POST['telephone']);
+    $message =htmlspecialchars($_POST['message']);
+
+    if(!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['entreprise']) AND !empty($_POST['poste']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['prenom']) AND !empty($_POST['telephone']) AND !empty($_POST['message']))
+    {
+
+        $prenomlength = strlen($prenom);
+        if($prenomlength <= 44)
+        {
+            $nomlength =strlen($nom);
+            if($nomlength <= 44)
+            {
+                $entrepriselength =strlen($entreprise);
+                if($entrepriselength <= 44)
+                {
+                    $postelength =strlen($poste);
+                    if($postelength <= 44)
+                    {
+                        if($mail == $mail2)
+                        {
+                            if(filter_var($mail, FILTER_VALIDATE_EMAIL))
+                            {
+                                $insertmember = $bdd->prepare("INSERT INTO membres(prenom, nom, entreprise, poste, mail, telephone, message) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                                $insertmember->execute(array($prenom, $nom, $entreprise, $poste, $mail, $telephone, $message));
+                                $erreur = "Merci, Votre Compte a bien été créé !";
+                                header('Location: index.html');
+                            }
+                            else
+                            {
+                                $erreur = "Votre Adresse Mail n'est pas valide !";
+                            }
+                        }
+                        else
+                        {
+                            $erreur = 'Vos Adresses Mail ne correspondent pas !';
+                        }
+                    }
+                    else
+                    {
+                        $erreur = "L'intitulé de votre Poste doit être inférieur à 44 caractères !";
+                    }
+                }
+                else
+                {
+                    $erreur = 'Le Nom de votre Entreprise doit être inférieur à 44 caractères !';
+                }
+            }
+            else
+            {
+                $erreur = 'Votre nom doit être inférieur à 44 caractères !';
+            }
+        }
+        else
+        {
+            $erreur = 'Votre prénom doit être inférieur à 44 caractères !';
+        }
+
+    }
+    else
+    {
+        $erreur = 'Tous les champs doivent être renseignés !';
+    }
+}
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +88,13 @@
 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- Animation Background -->
+
+    <script src="three.r95.min.js"></script>
+    <script src="vanta.birds.min.js"></script>
+
+    <!-- ----------------------->
 
     <link rel="stylesheet" href="contact.css">
 
@@ -33,6 +119,14 @@
         <img class="ml15" src="pictures/campuslogo.png" alt="logo Campus Academy Morgan NOTT" width="5%">
         -->
         <h1 class="ml15">Me Contacter ou laisser une recommandation : </h1>
+        <br>
+
+        <?php
+        if(isset($erreur))
+        {
+            echo '<font color="red" size="4em" > '. $erreur . "</font>";
+        }
+        ?>
         <br><br>
         <form method="POST" action="
         ">
@@ -43,7 +137,7 @@
                     </th>
 
                     <td align="right">
-                        <input id="prenom" type="text" placeholder="Votre Prénom : " name="prenom">
+                        <input id="prenom" type="text" placeholder="Votre Prénom : " name="prenom" value="<?php if(isset($prenom)) { echo $prenom;} ?>" >
                     </td>
                 </tr>
 
@@ -53,7 +147,7 @@
                     </th>
 
                     <td align="right">
-                        <input id="nom" type="text" placeholder="Votre Nom : " name="nom">
+                        <input id="nom" type="text" placeholder="Votre Nom : " name="nom" value="<?php if(isset($nom)) { echo $nom;} ?>" >
                     </td>
                 </tr>
 
@@ -63,7 +157,7 @@
                     </th>
 
                     <td align="right">
-                        <input id="entreprise" type="text" placeholder="Votre Entreprise : " name="entreprise">
+                        <input id="entreprise" type="text" placeholder="Votre Entreprise : " name="entreprise" value="<?php if(isset($entreprise)) { echo $entreprise;} ?>" >
                     </td>
                 </tr>
 
@@ -73,7 +167,7 @@
                     </th>
 
                     <td align="right">
-                        <input id="poste" type="text" placeholder="Votre Poste : " name="poste">
+                        <input id="poste" type="text" placeholder="Votre Poste : " name="poste" value="<?php if(isset($poste)) { echo $poste;} ?>" >
                     </td>
                 </tr>
 
@@ -83,7 +177,7 @@
                     </th>
 
                     <td align="right">
-                        <input id="mail" type="text" placeholder="Votre Mail : " name="mail">
+                        <input id="mail" type="email" placeholder="Votre Mail : " name="mail" value="<?php if(isset($mail)) { echo $mail;} ?>" >
                     </td>
                 </tr>
                 <tr>
@@ -92,17 +186,17 @@
                     </th>
 
                     <td align="right">
-                        <input id="mail2" type="text" placeholder="Confirmez votre Mail : " name="mail2">
+                        <input id="mail2" type="email" placeholder="Confirmez votre Mail : " name="mail2">
                     </td>
                 </tr>
 
                 <tr>
                     <th align="right">
-                        <label for="tel" >Votre Téléphone :</label>
+                        <label for="telephone" >Votre Téléphone :</label>
                     </th>
 
                     <td align="right">
-                        <input id="tel" type="tel" placeholder="Votre Télephone : " name="tel">
+                        <input id="telephone" type="tel" placeholder="Votre Télephone : " name="telephone" value="<?php if(isset($telephone)) { echo $telephone;} ?>" >
                     </td>
                 </tr>
 
@@ -112,7 +206,7 @@
                     </th>
 
                     <td align="right">
-                        <input id="message" type="text" placeholder="Ecrivez ici : " name="message">
+                        <input id="message" type="textarea" placeholder="Ecrivez ici : " name="message" value="<?php if(isset($message)) { echo $message;} ?>" >
                     </td>
                 </tr>
 
@@ -120,11 +214,15 @@
 
             </table>
             <br>
+
             <!--
-            <input type="submit" name="forminscription" value="Envoyer !">
+            <button type="button" name="forminscription" class="btn btn-info" value="Envoyer !">Envoyer !</button>
             -->
-            <button type="button" class="btn btn-info" value="Envoyer !">Envoyer !</button>
+
+            <input type="submit" name="forminscription" value="Envoyer !">
+
         </form>
+
     </div>
 
 
@@ -153,3 +251,4 @@
         delay: 1000
     });
 </script>
+
